@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бухта</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- application.css - взяв з сайту бухти -->
+    <link rel="stylesheet" href="css/application.css">
+    <link rel="stylesheet" href="css/modal_styles.css">
+</head>
+<body>
+    <div class="myPopup confirmation-popup" style="display: none;">
+        <div class="popup-window">
+            <div class="popup-inner">
+                <div class="popup-content">
+                    <img alt="close" class="pup_close_position popup-lazy-image" data-popup-close="book" src="img/form_cancel.svg">
+
+                    <div class="h3 pup_text_style pup_title pup_title_box">БРОНЮВАННЯ АЛЬТАНОК</div>
+                    
+                    <div class="text-center">
+                        <img src="img/checked-symbol.svg" class="check" alt="">
+
+                        <p class="pup_text alt_date">Альтанку №3 на 04.04.2019</p>
+
+                        <p class="pup_text_style sux_text">успішно заброньовано</p>
+
+                        <p class="pup_text">
+                            Вам потрібно здійснити оплату за це бронювання протягом наступних 30 хвилин, інакше воно автоматично скасується як прострочене.
+                        </p>
+                            
+                        <button class="blue_wave_link size_link" id="book_subm" type="submit">ОПЛАТИТИ ОНЛАЙН</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="myPopup info-popup sorry_rezerv" style="display: none;">
+        <div class="popup-window">
+            <div class="popup-inner">
+                <div class="popup-content">
+                    <img alt="close" class="pup_close_position popup-lazy-image" data-popup-close="book" src="img/form_cancel.svg">
+
+                    <div class="h3 pup_text_style pup_title pup_title_box">вибачте, альтанка №1 зарезервована</div>
+
+                    <p class="pup_text">
+                        Якщо, протягом 30 хвилин її не буде оплачено, Ви зможете забронювати її
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="myPopup info-popup" style="display: none;">
+        <div class="popup-window">
+            <div class="popup-inner">
+                <div class="popup-content">
+                    <img alt="close" class="pup_close_position popup-lazy-image" data-popup-close="book" src="img/form_cancel.svg">
+
+                    <div class="h3 pup_text_style pup_title pup_title_box">
+                        вибачте, альтанка №1 заброньована
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="myPopup info-popup" style="display: none;">
+        <div class="popup-window">
+            <div class="popup-inner">
+                <div class="popup-content">
+                    <img alt="close" class="pup_close_position popup-lazy-image" data-popup-close="book" src="img/form_cancel.svg">
+
+                    <div class="h3 pup_text_style pup_title pup_title_box">
+                        на жаль, на вибрану вами дату, немає вільних альтанок
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="myPopup booking-popup" style="display: none;">
+        <div class="popup-window">
+            <div class="popup-inner">
+                <div class="popup-content">
+                    <img alt="close" class="pup_close_position popup-lazy-image" data-popup-close="book" src="img/form_cancel.svg">
+
+                    <div class="h3 pup_text_style pup_title pup_title_box">ДАТА БРОНЮВАННЯ</div>
+
+                    <div class="progress_line_wrap">
+                        <div class="line active"></div>
+
+                        <div class="step active">
+                            <div class="img_wrap">
+                                <img src="img/form_calendar.svg" alt="">
+                            </div>
+
+                            <span>ДАТА</span>
+                        </div>
+
+                        <div class="line"></div>
+
+                        <div class="step">
+                            <div class="img_wrap">
+                                <img src="img/form_alcove.svg" alt="">
+                            </div>
+
+                            <span>АЛЬТАНКА</span>
+                        </div>
+
+                        <div class="line"></div>
+
+                        <div class="step">
+                            <div class="img_wrap">
+                                <img src="img/form_people.svg" alt="">
+                            </div>
+
+                            <span>ПЕРСОНАЛЬНІ ДАНІ</span>
+                        </div>
+
+                        <div class="line"></div>
+                    </div>
+
+                    <div class="booking_date">
+                        <p>ОБЕРІТЬ ДАТУ БРОНЮВАННЯ: <span>14.03.2019</span></p>
+                    </div>
+
+                    <div class="dates_table_wrap">
+                        <div class="month_switch">
+                            <button class="prew_mnth"></button>
+                            
+                            <p class="month">БЕРЕЗЕНЬ 2019</p>
+
+                            <button class="next_mnth"></button>
+                        </div>
+
+                        <div class="days_line_wrap">
+                            <p>Пн</p>
+                            <p>Вт</p>
+                            <p>Ср</p>
+                            <p>Чт</p>
+                            <p>Пт</p>
+                            <p>Сб</p>
+                            <p>Нд</p>
+                        </div>
+
+                        <div class="calendar">
+                            <div class="line">
+                                <div class="day disabled"></div>
+                                <div class="day disabled"></div>
+                                <div class="day disabled"></div>
+                                <div class="day disabled">1</div>
+                                <div class="day disabled">2</div>
+                                <div class="day disabled">3</div>
+                                <div class="day disabled">4</div>
+                            </div>
+
+                            <div class="line">
+                                <div class="day disabled">5</div>
+                                <div class="day disabled">6</div>
+                                <div class="day disabled">7</div>
+                                <div class="day disabled">8</div>
+                                <div class="day">9</div>
+                                <div class="day">10</div>
+                                <div class="day">11</div>
+                            </div>
+
+                            <div class="line">
+                                <div class="day">12</div>
+                                <div class="day curent">13</div>
+                                <div class="day">14</div>
+                                <div class="day">15</div>
+                                <div class="day">16</div>
+                                <div class="day">17</div>
+                                <div class="day">18</div>
+                            </div>
+
+                            <div class="line">
+                                <div class="day">19</div>
+                                <div class="day">20</div>
+                                <div class="day">21</div>
+                                <div class="day">22</div>
+                                <div class="day active">23</div>
+                                <div class="day">24</div>
+                                <div class="day">25</div>
+                            </div>
+
+                            <div class="line">
+                                <div class="day">26</div>
+                                <div class="day">27</div>
+                                <div class="day">28</div>
+                                <div class="day">29</div>
+                                <div class="day">30</div>
+                                <div class="day disabled"></div>
+                                <div class="day disabled"></div>
+                            </div>
+                        </div>
+                    </div>
+                            
+                    <div class="bnths_wrap">
+                        <button class="blue_wave_link size_link" id="book_subm" type="submit">ПРОДОВЖИТИ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="myPopup booking-popup altanki" style="display: none;">
+        <div class="popup-window">
+            <div class="popup-inner">
+                <div class="popup-content">
+                    <img alt="close" class="pup_close_position popup-lazy-image" data-popup-close="book" src="img/form_cancel.svg">
+
+                    <div class="h3 pup_text_style pup_title pup_title_box">ОБРАТИ АЛЬТАНКУ</div>
+
+                    <div class="progress_line_wrap">
+                        <div class="line active"></div>
+
+                        <div class="step active">
+                            <div class="img_wrap">
+                                <img src="img/form_calendar.svg" alt="">
+                            </div>
+
+                            <span>ДАТА</span>
+                        </div>
+
+                        <div class="line active"></div>
+
+                        <div class="step active">
+                            <div class="img_wrap">
+                                <img src="img/form_alcove.svg" alt="">
+                            </div>
+
+                            <span>АЛЬТАНКА</span>
+                        </div>
+
+                        <div class="line"></div>
+
+                        <div class="step">
+                            <div class="img_wrap">
+                                <img src="img/form_people.svg" alt="">
+                            </div>
+
+                            <span>ПЕРСОНАЛЬНІ ДАНІ</span>
+                        </div>
+
+                        <div class="line"></div>
+                    </div>
+
+                    <div class="altanka_selector">
+                        <div class="select_and_map">
+                            <p class="booking_type">
+                                ОБЕРІТЬ АЛЬТАНКУ: <span>Альтанка велика №46 — ₴600</span>
+                            </p>
+
+                            <button class="show_map">ПЕРЕГЛЯНУТИ СХЕМУ АЛЬТАНОК</button>
+                        </div> 
+
+                        <div class="drop_down_wrap">
+                            <p class="title">Тип альтанки</p>
+
+                            <img src="img/drop_down_icon.svg" alt="">
+
+                            <p class="selcted">ВСІ АЛЬТАНКИ</p>
+
+                            <div class="drop" style="display: none;">
+                                <div class="selected">Вcі альтанки</div>
+                                <div>Альтанка велика (засклена)</div>
+                                <div>Альтанка велика (незасклена)</div>
+                                <div>Альтанка мала (засклена)</div>
+                                <div>Альтанка мала (незасклена)</div>
+                                <div>Альтанка (50-місна)</div>
+                                <div>Альтанка (біля кораблика)</div>
+                                <div>Альтанка (біля готелю)</div>
+                                <div>Альтанка VIP</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="altanki_wrap">
+                        <div class="altanka">
+                            1
+                            <span>500</span>
+                        </div>
+
+                        <div class="altanka">
+                            2
+                            <span>500</span>
+                        </div>
+
+                        <div class="altanka">
+                            3
+                            <span>500</span>
+                        </div>
+
+                        <div class="altanka">
+                            4
+                            <span>500</span>
+                        </div>
+
+                        <div class="altanka">
+                            5
+                            <span>500</span>
+                        </div>
+
+                        <div class="altanka">
+                            6
+                            <span>400</span>
+                        </div>
+
+                        <div class="altanka">
+                            7
+                            <span>400</span>
+                        </div>
+
+                        <div class="altanka booked">
+                            8
+                            <span>400</span>
+                        </div>
+
+                        <div class="altanka">
+                            9
+                            <span>400</span>
+                        </div>
+
+                        <div class="altanka booked">
+                            10
+                            <span>400</span>
+                        </div>
+
+                        <div class="altanka">
+                            11
+                            <span>400</span>
+                        </div>
+
+                        <div class="altanka">
+                            12
+                            <span>400</span>
+                        </div>
+
+                        <div class="altanka">
+                            13
+                            <span>400</span>
+                        </div>
+
+                        <div class="altanka">
+                            14
+                            <span>400</span>
+                        </div>
+
+                        <div class="altanka">
+                            15
+                            <span>400</span>
+                        </div>
+
+                        <div class="altanka active">
+                            16
+                            <span>400</span>
+                        </div>
+
+                        <div class="altanka">
+                            17
+                            <span>500</span>
+                        </div>
+
+                        <div class="altanka">
+                            18
+                            <span>400</span>
+                        </div>
+
+                        <div class="altanka">
+                            19
+                            <span>400</span>
+                        </div>
+
+                        <div class="altanka reserved">
+                            20
+                            <span>800</span>
+                        </div>
+
+                        <div class="altanka">
+                            21
+                            <span>800</span>
+                        </div>
+
+                        <div class="altanka">
+                            22
+                            <span>800</span>
+                        </div>
+
+                        <div class="altanka">
+                            23
+                            <span>700</span>
+                        </div>
+
+                        <div class="altanka">
+                            24
+                            <span>700</span>
+                        </div>
+
+                        <div class="altanka">
+                            25
+                            <span>700</span>
+                        </div>
+
+                        <div class="altanka">
+                            26
+                            <span>700</span>
+                        </div>
+
+                        <div class="altanka">
+                            27
+                            <span>700</span>
+                        </div>
+
+                        <div class="altanka">
+                            28
+                            <span>700</span>
+                        </div>
+
+                        <div class="altanka">
+                            29
+                            <span>700</span>
+                        </div>
+
+                        <div class="altanka">
+                            30
+                            <span>400</span>
+                        </div>
+
+                        <div class="altanka">
+                            31
+                            <span>700</span>
+                        </div>
+
+                        <div class="altanka">
+                            32
+                            <span>700</span>
+                        </div>
+
+                        <div class="altanka booked">
+                            33
+                            <span>400</span>
+                        </div>
+
+                        <div class="altanka">
+                            34
+                            <span>400</span>
+                        </div>
+
+                        <div class="altanka">
+                            35
+                            <span>400</span>
+                        </div>
+
+                        <div class="altanka booked">
+                            36
+                            <span>700</span>
+                        </div>
+
+                        <div class="altanka">
+                            37
+                            <span>700</span>
+                        </div>
+
+                        <div class="altanka">
+                            40
+                            <span>400</span>
+                        </div>
+
+                        <div class="altanka">
+                            41
+                            <span>400</span>
+                        </div>
+
+                        <div class="altanka">
+                            42
+                            <span>700</span>
+                        </div>
+
+                        <div class="altanka">
+                            43
+                            <span>700</span>
+                        </div>
+
+                        <div class="altanka">
+                            44
+                            <span>700</span>
+                        </div>
+
+                        <div class="altanka">
+                            45
+                            <span>400</span>
+                        </div>
+
+                        <div class="altanka booked">
+                            46
+                            <span>700</span>
+                        </div>
+
+                        <div class="altanka">
+                            47
+                            <span>400</span>
+                        </div>
+
+                        <div class="altanka">
+                            50
+                            <span>400</span>
+                        </div>
+
+                        <div class="altanka">
+                            51
+                            <span>400</span>
+                        </div>
+
+                        <div class="altanka">
+                            52
+                            <span>400</span>
+                        </div>
+
+                        <div class="altanka">
+                            53
+                            <span>1400</span>
+                        </div>
+
+                        <div class="altanka">
+                            54
+                            <span>1400</span>
+                        </div>
+
+                        <div class="altanka">
+                            55
+                            <span>1400</span>
+                        </div>
+
+                        <div class="altanka">
+                            56
+                            <span>1400</span>
+                        </div>
+
+                        <div class="altanka">
+                            57
+                            <span>400</span>
+                        </div>
+
+                        <div class="altanka">
+                            58
+                            <span>700</span>
+                        </div>
+
+                        <div class="altanka">
+                            P1
+                            <span>700</span>
+                        </div>
+
+                        <div class="altanka">
+                            P2
+                            <span>700</span>
+                        </div>
+
+                        <div class="altanka">
+                            P3
+                            <span>700</span>
+                        </div>
+
+                        <div class="altanka">
+                            VIP1
+                            <span>1500</span>
+                        </div>
+
+                        <div class="altanka">
+                            VIP2
+                            <span>1500</span>
+                        </div>
+
+                        <div class="altanka">
+                            VIP3
+                            <span>1500</span>
+                        </div>
+
+                        <div class="altanka">
+                            VIP4
+                            <span>1500</span>
+                        </div>
+
+                        <div class="altanka">
+                            Б1
+                            <span>700</span>
+                        </div>
+
+                        <div class="altanka">
+                            Б2
+                            <span>700</span>
+                        </div>
+
+                        <div class="altanka">
+                            Б3
+                            <span>700</span>
+                        </div>
+                    </div>
+
+                    <div class="status_wrap">
+                        <p>Статуси альтанок:</p>
+
+                        <div class="status">
+                            <span class="empty"></span>
+                            Вільна
+                        </div>
+
+                        <div class="status">
+                            <span class="selected"></span>
+                            Обрана
+                        </div>
+
+                        <div class="status">
+                            <span class="reserved"></span>
+                            Резерв*
+                        </div>
+
+                        <div class="status">
+                            <span class="booked"></span>
+                            Заброньована
+                        </div>
+                    </div>
+
+                    <p class="reserv_data">
+                        * резервація альтанки зберігається до моменту оплати протягом 10 хвилин;
+                    </p>
+
+                    <div class="preson_count">
+                        <p>Місткість альтанок:</p>
+
+                        <div>
+                            <div class="type">
+                                <span>
+                                    до 10
+                                    <img src="img/form_people.svg" alt="">
+                                </span>
+    
+                                <p>
+                                    альтанка біля готелю/бару
+                                </p>
+                            </div>
+                       
+                            <div class="type">
+                                <span>
+                                    до 25
+                                    <img src="img/form_people.svg" alt="">
+                                </span>
+    
+                                <p>
+                                    альтанка велика
+                                </p>
+                            </div>
+
+                            <div class="type">
+                                <span></span>
+    
+                                <p>
+                                    альтанка мала
+                                </p>
+                            </div>
+
+                            <div class="type">
+                                <span>
+                                    до 50
+                                    <img src="img/form_people.svg" alt="">
+                                </span>
+    
+                                <p>
+                                    VIP альтанка
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                            
+                    <div class="bnths_wrap">
+                        <button class="grey_wave_link" type="submit">НАЗАД</button>
+
+                        <button class="blue_wave_link" type="submit">ПРОДОВЖИТИ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="myPopup zone-popup" style="display: none;">
+        <div class="popup-window">
+            <div class="popup-inner">
+                <div class="popup-content">
+                    <img alt="close" class="pup_close_position popup-lazy-image" data-popup-close="book" src="img/form_cancel_white.svg">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="myPopup booking-popup altanki" style="display: flex;">
+        <div class="popup-window">
+            <div class="popup-inner">
+                <div class="popup-content">
+                    <img alt="close" class="pup_close_position popup-lazy-image" data-popup-close="book" src="img/form_cancel.svg">
+
+                    <div class="h3 pup_text_style pup_title pup_title_box">ОБРАТИ АЛЬТАНКУ</div>
+
+                    <div class="progress_line_wrap">
+                        <div class="line active"></div>
+
+                        <div class="step active">
+                            <div class="img_wrap">
+                                <img src="img/form_calendar.svg" alt="">
+                            </div>
+
+                            <span>ДАТА</span>
+                        </div>
+
+                        <div class="line active"></div>
+
+                        <div class="step active">
+                            <div class="img_wrap">
+                                <img src="img/form_alcove.svg" alt="">
+                            </div>
+
+                            <span>АЛЬТАНКА</span>
+                        </div>
+
+                        <div class="line active"></div>
+
+                        <div class="step active">
+                            <div class="img_wrap">
+                                <img src="img/form_people.svg" alt="">
+                            </div>
+
+                            <span>ПЕРСОНАЛЬНІ ДАНІ</span>
+                        </div>
+
+                        <div class="line active"></div>
+                    </div>
+
+                    <div class="inner">
+                        <p class="subtitle s1">ІНФОРМАЦІЯ ПРО ЗАМОВЛЕННЯ:</p>
+
+                        <div class="book_form_wrap">
+                            <div class="left_part">
+                                <div class="input_wrap">
+                                    <label for="name">
+                                        <input type="text" id="name" required tabindex="1">
+
+                                        <span class="placeholder">Ім'я *</span>
+                                    </label>
+                                </div>
+
+                                <div class="input_wrap">
+                                    <label for="surname">
+                                        <input type="text" id="surname" required  tabindex="2">
+
+                                        <span class="placeholder">Прізвище *</span>
+                                    </label>
+                                </div>
+
+                                <div class="input_wrap">
+                                    <label for="tel">
+                                        <input type="tel" id="tel" required tabindex="3">
+
+                                        <span class="placeholder">Телефон *</span>
+                                    </label>
+                                </div>
+
+                                <div class="input_wrap">
+                                    <label for="email">
+                                        <input type="email" id="email" required tabindex="4">
+
+                                        <span class="placeholder">Електронна скринька *</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="right_part">
+                                <p>№ АЛЬТАНКИ:<span>26</span></p>
+
+                                <p>ТИП:<span>Альтанка велика (незасклена)</span></p>
+
+                                <p>ДАТА:<span>03.07.2019</span></p>
+
+                                <p>ЦІНА:<span>₴1200</span></p>
+
+                                <p>СЕРВІСНИЙ ЗБІР<span>₴535</span></p>
+
+                                <p>РАЗОМ ДО ОПЛАТИ<span>₴535</span></p>
+                            </div>
+                        </div>
+
+                        <p class="subtitle s2">УМОВИ БРОНЮВАННЯ:</p>
+
+                        <ul class="umovy">
+                            <li>— в момент оплати бронювання стягується повна вартість альтанки;</li>
+
+                            <li>— бронювання після оплати не змінюється;</li>
+
+                            <li>— скасування або зміна бронювання на іншу дату не допускається;</li>
+
+                            <li>— оплачуючи альтанку, Ви погоджуєтесь з умовами бронювання.</li>
+                        </ul>
+
+                        <label for="acept" class="accept">
+                            <input type="checkbox" id="acept">
+
+                            <span></span>
+                            <p>Я розумію та погоджуюсь з умовами бронювання *</p>
+                        </label>
+                    </div>
+                            
+                    <div class="bnths_wrap">
+                        <button class="grey_wave_link" type="submit">НАЗАД</button>
+
+                        <button class="blue_wave_link" type="submit">ПРОДОВЖИТИ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
