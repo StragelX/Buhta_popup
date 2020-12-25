@@ -13,6 +13,26 @@
   padding: 65px 45px 55px;
 }
 
+@media all and (max-width: 450px) {
+  .info-popup .popup-content {
+    padding: 50px 20px 40px;
+  }
+}
+
+.info-popup .pup_title {
+  font-size: 14px;
+  line-height: 29px;
+  letter-spacing: 0;
+  display: block !important;
+}
+
+@media all and (max-width: 450px) {
+  .info-popup .pup_title {
+    font-size: 11px;
+    line-height: 23px;
+  }
+}
+
 .info-popup [data-popup-close] {
   top: 23px;
   right: 18px;
@@ -23,15 +43,18 @@
 }
 
 .info-popup.sorry_rezerv .pup_title {
-  font-size: 14px;
   margin-bottom: 10px;
-  letter-spacing: 0;
 }
 
 @media all and (max-width: 550px) {
   .info-popup.sorry_rezerv .pup_text {
     text-align: center;
   }
+}
+
+.info-popup.sory_date .pup_title {
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
 .zone-popup .popup-window {
@@ -478,7 +501,7 @@
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0);
   opacity: 1;
   transform: scale(1);
-  transition: opacity 180ms, color 180ms, background-color 180ms, box-shadow 180ms, transform 180ms;
+  transition: opacity 180ms, color 180ms, background-color 180ms, box-shadow 180ms, transform 180ms;
 }
 
 @media all and (max-width: 760px) {
@@ -505,7 +528,7 @@
   background-color: #a42b45;
   opacity: 1;
   color: #fff;
-  transition: opacity 180ms, color 180ms, background-color 180ms, box-shadow 180ms, transform 180ms;
+  transition: opacity 180ms, color 180ms, background-color 180ms, box-shadow 180ms, transform 180ms;
 }
 
 .booking-popup .calendar .day:hover:not(.disabled) {
@@ -514,7 +537,7 @@
   color: #fff;
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
   transform: scale(1.18);
-  transition: opacity 180ms, color 180ms, background-color 180ms, box-shadow 180ms, transform 180ms;
+  transition: opacity 180ms, color 180ms, background-color 180ms, box-shadow 180ms, transform 180ms;
 }
 
 .booking-popup .bnths_wrap {
@@ -754,7 +777,7 @@
   margin-bottom: 15px;
   margin-left: 15px;
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0);
-  transition: box-shadow 180ms, color 180ms, border 180ms, transform 180ms, background-color 180ms;
+  transition: box-shadow 180ms, color 180ms, border 180ms, transform 180ms, background-color 180ms;
 }
 
 @media all and (max-width: 750px) {
@@ -791,7 +814,7 @@
   border: 1px solid #a42b45;
   background-color: #a42b45;
   color: #fff;
-  transition: box-shadow 180ms, color 180ms, border 180ms, transform 180ms, background-color 180ms;
+  transition: box-shadow 180ms, color 180ms, border 180ms, transform 180ms, background-color 180ms;
 }
 
 .booking-popup .altanki_wrap .altanka.active span {
@@ -803,7 +826,7 @@
   border: 1px solid #00263a;
   background-color: #00263a;
   color: #fff;
-  transition: box-shadow 180ms, color 180ms, border 180ms, transform 180ms, background-color 180ms;
+  transition: box-shadow 180ms, color 180ms, border 180ms, transform 180ms, background-color 180ms;
 }
 
 .booking-popup .altanki_wrap .altanka.booked span {
@@ -817,7 +840,7 @@
   color: #fff;
   transform: scale(1.15);
   border: 1px solid #a42b45;
-  transition: box-shadow 180ms, color 180ms, border 180ms, transform 180ms, background-color 180ms;
+  transition: box-shadow 180ms, color 180ms, border 180ms, transform 180ms, background-color 180ms;
 }
 
 .booking-popup .altanki_wrap .altanka:hover:not(.reserved):not(.active) span {
@@ -1301,6 +1324,22 @@
 .pup_title {
   cursor: default;
   text-transform: uppercase;
+}
+
+.pup_title.mob_header {
+  display: none;
+}
+
+@media all and (max-width: 450px) {
+  .pup_title.mob_header {
+    display: block;
+  }
+}
+
+@media all and (max-width: 450px) {
+  .pup_title:not(.mob_header) {
+    display: none;
+  }
 }
 
 .pup_sub_title {

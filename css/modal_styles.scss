@@ -9,6 +9,22 @@
 
   .popup-content {
     padding: 65px 45px 55px;
+
+    @media all and (max-width: 450px) {
+      padding: 50px 20px 40px;
+    }
+  }
+
+  .pup_title {
+    font-size: 14px;
+    line-height: 29px;
+    letter-spacing: 0;
+    display: block !important;
+
+    @media all and (max-width: 450px) {
+      font-size: 11px;
+      line-height: 23px;
+    }
   }
 
   [data-popup-close] {
@@ -22,15 +38,20 @@
     }
 
     .pup_title {
-      font-size: 14px;
       margin-bottom: 10px;
-      letter-spacing: 0;
     }
 
     .pup_text {
       @media all and (max-width: 550px) {
         text-align: center;
       }
+    }
+  }
+
+  &.sory_date {
+    .pup_title {
+      margin-bottom: 0;
+      margin-top: 0;
     }
   }
 }
@@ -1206,6 +1227,20 @@
 .pup_title {
   cursor: default;
   text-transform: uppercase;
+
+  &.mob_header {
+    display: none;
+
+    @media all and (max-width: 450px) {
+      display: block;
+    }
+  }
+
+  &:not(.mob_header) {
+    @media all and (max-width: 450px) {
+      display: none;
+    }
+  }
 }
 
 .pup_sub_title {

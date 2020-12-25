@@ -11,9 +11,11 @@
     <!-- application.css - взяв з сайту бухти -->
     <link rel="stylesheet" href="css/application.css">
     <link rel="stylesheet" href="css/modal_styles.css">
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="myPopup confirmation-popup" style="display: none;">
+    <div class="myPopup confirmation-popup" style="display: flex;">
         <div class="popup-window">
             <div class="popup-inner">
                 <div class="popup-content">
@@ -39,7 +41,7 @@
         </div>
     </div>
 
-    <div class="myPopup info-popup sorry_rezerv" style="display: none;">
+    <div class="myPopup info-popup sorry_rezerv" style="display: flex;">
         <div class="popup-window">
             <div class="popup-inner">
                 <div class="popup-content">
@@ -55,7 +57,7 @@
         </div>
     </div>
 
-    <div class="myPopup info-popup" style="display: none;">
+    <div class="myPopup info-popup" style="display: flex;">
         <div class="popup-window">
             <div class="popup-inner">
                 <div class="popup-content">
@@ -69,7 +71,7 @@
         </div>
     </div>
 
-    <div class="myPopup info-popup" style="display: none;">
+    <div class="myPopup info-popup sory_date" style="display: flex;">
         <div class="popup-window">
             <div class="popup-inner">
                 <div class="popup-content">
@@ -83,13 +85,25 @@
         </div>
     </div>
 
-    <div class="myPopup booking-popup" style="display: none;">
+    <div class="myPopup zone-popup" style="display: flex;">
+        <div class="popup-window">
+            <div class="popup-inner">
+                <div class="popup-content">
+                    <img alt="close" class="pup_close_position popup-lazy-image" data-popup-close="book" src="img/form_cancel_white.svg">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="myPopup booking-popup altanki" style="display: flex;">
         <div class="popup-window">
             <div class="popup-inner">
                 <div class="popup-content">
                     <img alt="close" class="pup_close_position popup-lazy-image" data-popup-close="book" src="img/form_cancel.svg">
 
-                    <div class="h3 pup_text_style pup_title pup_title_box">ДАТА БРОНЮВАННЯ</div>
+                    <div class="h3 pup_text_style pup_title pup_title_box">БРОНЮВАННЯ АЛЬТАНОК</div>
+
+                    <div class="h3 pup_text_style pup_title pup_title_box mob_header">ПЕРСОНАЛЬНІ ДАНІ</div>
 
                     <div class="progress_line_wrap">
                         <div class="line active"></div>
@@ -102,9 +116,9 @@
                             <span>ДАТА</span>
                         </div>
 
-                        <div class="line"></div>
+                        <div class="line active"></div>
 
-                        <div class="step">
+                        <div class="step active">
                             <div class="img_wrap">
                                 <img src="img/form_alcove.svg" alt="">
                             </div>
@@ -112,9 +126,9 @@
                             <span>АЛЬТАНКА</span>
                         </div>
 
-                        <div class="line"></div>
+                        <div class="line active"></div>
 
-                        <div class="step">
+                        <div class="step active">
                             <div class="img_wrap">
                                 <img src="img/form_people.svg" alt="">
                             </div>
@@ -122,100 +136,101 @@
                             <span>ПЕРСОНАЛЬНІ ДАНІ</span>
                         </div>
 
-                        <div class="line"></div>
+                        <div class="line active"></div>
                     </div>
 
-                    <div class="booking_date">
-                        <p>ОБЕРІТЬ ДАТУ БРОНЮВАННЯ: <span>14.03.2019</span></p>
-                    </div>
+                    <div class="inner">
+                        <p class="subtitle s1">ІНФОРМАЦІЯ ПРО ЗАМОВЛЕННЯ:</p>
 
-                    <div class="dates_table_wrap">
-                        <div class="month_switch">
-                            <button class="prew_mnth"></button>
-                            
-                            <p class="month">БЕРЕЗЕНЬ 2019</p>
+                        <div class="book_form_wrap">
+                            <div class="left_part">
+                                <div class="input_wrap">
+                                    <label for="name">
+                                        <input type="text" id="name" required tabindex="1">
 
-                            <button class="next_mnth"></button>
-                        </div>
+                                        <span class="placeholder">Ім'я *</span>
+                                    </label>
+                                </div>
 
-                        <div class="days_line_wrap">
-                            <p>Пн</p>
-                            <p>Вт</p>
-                            <p>Ср</p>
-                            <p>Чт</p>
-                            <p>Пт</p>
-                            <p>Сб</p>
-                            <p>Нд</p>
-                        </div>
+                                <div class="input_wrap">
+                                    <label for="surname">
+                                        <input type="text" id="surname" required  tabindex="2">
 
-                        <div class="calendar">
-                            <div class="line">
-                                <div class="day disabled"></div>
-                                <div class="day disabled"></div>
-                                <div class="day disabled"></div>
-                                <div class="day disabled">1</div>
-                                <div class="day disabled">2</div>
-                                <div class="day disabled">3</div>
-                                <div class="day disabled">4</div>
+                                        <span class="placeholder">Прізвище *</span>
+                                    </label>
+                                </div>
+
+                                <div class="input_wrap">
+                                    <label for="tel">
+                                        <input type="tel" id="tel" required tabindex="3">
+
+                                        <span class="placeholder">Телефон *</span>
+                                    </label>
+                                </div>
+
+                                <div class="input_wrap">
+                                    <label for="email">
+                                        <input type="email" id="email" required tabindex="4">
+
+                                        <span class="placeholder">Електронна скринька *</span>
+                                    </label>
+                                </div>
                             </div>
 
-                            <div class="line">
-                                <div class="day disabled">5</div>
-                                <div class="day disabled">6</div>
-                                <div class="day disabled">7</div>
-                                <div class="day disabled">8</div>
-                                <div class="day">9</div>
-                                <div class="day">10</div>
-                                <div class="day">11</div>
-                            </div>
+                            <div class="right_part">
+                                <p>№ АЛЬТАНКИ:<span>26</span></p>
 
-                            <div class="line">
-                                <div class="day">12</div>
-                                <div class="day curent">13</div>
-                                <div class="day">14</div>
-                                <div class="day">15</div>
-                                <div class="day">16</div>
-                                <div class="day">17</div>
-                                <div class="day">18</div>
-                            </div>
+                                <p>ТИП:<span>Альтанка велика (незасклена)</span></p>
 
-                            <div class="line">
-                                <div class="day">19</div>
-                                <div class="day">20</div>
-                                <div class="day">21</div>
-                                <div class="day">22</div>
-                                <div class="day active">23</div>
-                                <div class="day">24</div>
-                                <div class="day">25</div>
-                            </div>
+                                <p>ДАТА:<span>03.07.2019</span></p>
 
-                            <div class="line">
-                                <div class="day">26</div>
-                                <div class="day">27</div>
-                                <div class="day">28</div>
-                                <div class="day">29</div>
-                                <div class="day">30</div>
-                                <div class="day disabled"></div>
-                                <div class="day disabled"></div>
+                                <p>ЦІНА:<span>₴1200</span></p>
+
+                                <p>СЕРВІСНИЙ ЗБІР<span>₴535</span></p>
+
+                                <p>РАЗОМ ДО ОПЛАТИ<span>₴535</span></p>
                             </div>
                         </div>
+
+                        <p class="subtitle s2">УМОВИ БРОНЮВАННЯ:</p>
+
+                        <ul class="umovy">
+                            <li>— в момент оплати бронювання стягується повна вартість альтанки;</li>
+
+                            <li>— бронювання після оплати не змінюється;</li>
+
+                            <li>— скасування або зміна бронювання на іншу дату не допускається;</li>
+
+                            <li>— оплачуючи альтанку, Ви погоджуєтесь з умовами бронювання.</li>
+                        </ul>
+
+                        <label for="acept" class="accept">
+                            <input type="checkbox" id="acept">
+
+                            <span></span>
+                            <p>Я розумію та погоджуюсь з умовами бронювання *</p>
+                        </label>
                     </div>
                             
                     <div class="bnths_wrap">
-                        <button class="blue_wave_link size_link" id="book_subm" type="submit">ПРОДОВЖИТИ</button>
+                        <button class="grey_wave_link" type="submit">НАЗАД</button>
+
+                        <button class="blue_wave_link" type="submit">ПРОДОВЖИТИ</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="myPopup booking-popup altanki" style="display: none;">
+    <div class="myPopup booking-popup altanki" style="display: flex;">
         <div class="popup-window">
             <div class="popup-inner">
                 <div class="popup-content">
                     <img alt="close" class="pup_close_position popup-lazy-image" data-popup-close="book" src="img/form_cancel.svg">
 
-                    <div class="h3 pup_text_style pup_title pup_title_box">ОБРАТИ АЛЬТАНКУ</div>
+                    <div class="h3 pup_text_style pup_title pup_title_box">БРОНЮВАННЯ АЛЬТАНОК</div>
+
+                    <div class="h3 pup_text_style pup_title pup_title_box mob_header">ОБРАТИ АЛЬТАНКУ</div>
 
                     <div class="progress_line_wrap">
                         <div class="line active"></div>
@@ -688,23 +703,15 @@
         </div>
     </div>
 
-    <div class="myPopup zone-popup" style="display: none;">
-        <div class="popup-window">
-            <div class="popup-inner">
-                <div class="popup-content">
-                    <img alt="close" class="pup_close_position popup-lazy-image" data-popup-close="book" src="img/form_cancel_white.svg">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="myPopup booking-popup altanki" style="display: flex;">
+    <div class="myPopup booking-popup" style="display: flex;">
         <div class="popup-window">
             <div class="popup-inner">
                 <div class="popup-content">
                     <img alt="close" class="pup_close_position popup-lazy-image" data-popup-close="book" src="img/form_cancel.svg">
 
-                    <div class="h3 pup_text_style pup_title pup_title_box">ОБРАТИ АЛЬТАНКУ</div>
+                    <div class="h3 pup_text_style pup_title pup_title_box">БРОНЮВАННЯ АЛЬТАНОК</div>
+
+                    <div class="h3 pup_text_style pup_title pup_title_box mob_header">ДАТА БРОНЮВАННЯ</div>
 
                     <div class="progress_line_wrap">
                         <div class="line active"></div>
@@ -717,9 +724,9 @@
                             <span>ДАТА</span>
                         </div>
 
-                        <div class="line active"></div>
+                        <div class="line"></div>
 
-                        <div class="step active">
+                        <div class="step">
                             <div class="img_wrap">
                                 <img src="img/form_alcove.svg" alt="">
                             </div>
@@ -727,9 +734,9 @@
                             <span>АЛЬТАНКА</span>
                         </div>
 
-                        <div class="line active"></div>
+                        <div class="line"></div>
 
-                        <div class="step active">
+                        <div class="step">
                             <div class="img_wrap">
                                 <img src="img/form_people.svg" alt="">
                             </div>
@@ -737,90 +744,99 @@
                             <span>ПЕРСОНАЛЬНІ ДАНІ</span>
                         </div>
 
-                        <div class="line active"></div>
+                        <div class="line"></div>
                     </div>
 
-                    <div class="inner">
-                        <p class="subtitle s1">ІНФОРМАЦІЯ ПРО ЗАМОВЛЕННЯ:</p>
+                    <div class="booking_date">
+                        <p>ОБЕРІТЬ ДАТУ БРОНЮВАННЯ: <span>14.03.2019</span></p>
+                    </div>
 
-                        <div class="book_form_wrap">
-                            <div class="left_part">
-                                <div class="input_wrap">
-                                    <label for="name">
-                                        <input type="text" id="name" required tabindex="1">
+                    <div class="dates_table_wrap">
+                        <div class="month_switch">
+                            <button class="prew_mnth"></button>
+                            
+                            <p class="month">БЕРЕЗЕНЬ 2019</p>
 
-                                        <span class="placeholder">Ім'я *</span>
-                                    </label>
-                                </div>
-
-                                <div class="input_wrap">
-                                    <label for="surname">
-                                        <input type="text" id="surname" required  tabindex="2">
-
-                                        <span class="placeholder">Прізвище *</span>
-                                    </label>
-                                </div>
-
-                                <div class="input_wrap">
-                                    <label for="tel">
-                                        <input type="tel" id="tel" required tabindex="3">
-
-                                        <span class="placeholder">Телефон *</span>
-                                    </label>
-                                </div>
-
-                                <div class="input_wrap">
-                                    <label for="email">
-                                        <input type="email" id="email" required tabindex="4">
-
-                                        <span class="placeholder">Електронна скринька *</span>
-                                    </label>
-                                </div>
-                            </div>
-
-                            <div class="right_part">
-                                <p>№ АЛЬТАНКИ:<span>26</span></p>
-
-                                <p>ТИП:<span>Альтанка велика (незасклена)</span></p>
-
-                                <p>ДАТА:<span>03.07.2019</span></p>
-
-                                <p>ЦІНА:<span>₴1200</span></p>
-
-                                <p>СЕРВІСНИЙ ЗБІР<span>₴535</span></p>
-
-                                <p>РАЗОМ ДО ОПЛАТИ<span>₴535</span></p>
-                            </div>
+                            <button class="next_mnth"></button>
                         </div>
 
-                        <p class="subtitle s2">УМОВИ БРОНЮВАННЯ:</p>
+                        <div class="days_line_wrap">
+                            <p>Пн</p>
+                            <p>Вт</p>
+                            <p>Ср</p>
+                            <p>Чт</p>
+                            <p>Пт</p>
+                            <p>Сб</p>
+                            <p>Нд</p>
+                        </div>
 
-                        <ul class="umovy">
-                            <li>— в момент оплати бронювання стягується повна вартість альтанки;</li>
+                        <div class="calendar">
+                            <div class="line">
+                                <div class="day disabled"></div>
+                                <div class="day disabled"></div>
+                                <div class="day disabled"></div>
+                                <div class="day disabled">1</div>
+                                <div class="day disabled">2</div>
+                                <div class="day disabled">3</div>
+                                <div class="day disabled">4</div>
+                            </div>
 
-                            <li>— бронювання після оплати не змінюється;</li>
+                            <div class="line">
+                                <div class="day disabled">5</div>
+                                <div class="day disabled">6</div>
+                                <div class="day disabled">7</div>
+                                <div class="day disabled">8</div>
+                                <div class="day">9</div>
+                                <div class="day">10</div>
+                                <div class="day">11</div>
+                            </div>
 
-                            <li>— скасування або зміна бронювання на іншу дату не допускається;</li>
+                            <div class="line">
+                                <div class="day">12</div>
+                                <div class="day curent">13</div>
+                                <div class="day">14</div>
+                                <div class="day">15</div>
+                                <div class="day">16</div>
+                                <div class="day">17</div>
+                                <div class="day">18</div>
+                            </div>
 
-                            <li>— оплачуючи альтанку, Ви погоджуєтесь з умовами бронювання.</li>
-                        </ul>
+                            <div class="line">
+                                <div class="day">19</div>
+                                <div class="day">20</div>
+                                <div class="day">21</div>
+                                <div class="day">22</div>
+                                <div class="day active">23</div>
+                                <div class="day">24</div>
+                                <div class="day">25</div>
+                            </div>
 
-                        <label for="acept" class="accept">
-                            <input type="checkbox" id="acept">
-
-                            <span></span>
-                            <p>Я розумію та погоджуюсь з умовами бронювання *</p>
-                        </label>
+                            <div class="line">
+                                <div class="day">26</div>
+                                <div class="day">27</div>
+                                <div class="day">28</div>
+                                <div class="day">29</div>
+                                <div class="day">30</div>
+                                <div class="day disabled"></div>
+                                <div class="day disabled"></div>
+                            </div>
+                        </div>
                     </div>
                             
                     <div class="bnths_wrap">
-                        <button class="grey_wave_link" type="submit">НАЗАД</button>
-
-                        <button class="blue_wave_link" type="submit">ПРОДОВЖИТИ</button>
+                        <button class="blue_wave_link size_link" id="book_subm" type="submit">ПРОДОВЖИТИ</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </body>
+
+<script>
+$( document ).ready(function() {
+    $('.pup_close_position').click(function(){
+        $(this).closest(".myPopup").hide();
+    })
+});
+</script>
 </html>
