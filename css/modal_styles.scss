@@ -1263,13 +1263,5 @@
 .popup-window {
   @media all and (max-width: 450px) {
     max-height: 85vh;
-    overflow-y: scroll;
-  }
-}
-
-.popup-inner {
-  @media all and (max-width: 450px) {
-    max-width: 100%;
-    overflow-y: scroll;
   }
 }
