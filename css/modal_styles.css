@@ -1362,6 +1362,7 @@
 @media all and (max-width: 450px) {
   .popup-window {
     max-height: 85vh;
+    overflow-y: scroll;
   }
 }
 /*# sourceMappingURL=modal_styles.css.map */
