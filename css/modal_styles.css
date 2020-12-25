@@ -13,7 +13,7 @@
   padding: 65px 45px 55px;
 }
 
-@media all and (max-width: 450px) {
+@media all and (max-width: 750px) {
   .info-popup .popup-content {
     padding: 50px 20px 40px;
   }
@@ -26,7 +26,7 @@
   display: block !important;
 }
 
-@media all and (max-width: 450px) {
+@media all and (max-width: 750px) {
   .info-popup .pup_title {
     font-size: 11px;
     line-height: 23px;
@@ -178,6 +178,7 @@
 .booking-popup .popup-content {
   width: 885px;
   padding: 50px 60px 45px;
+  min-height: 982px;
 }
 
 @media all and (max-width: 1020px) {
@@ -189,6 +190,7 @@
 @media all and (max-width: 760px) {
   .booking-popup .popup-content {
     padding: 20px 20px 30px;
+    min-height: unset;
   }
 }
 
@@ -789,7 +791,6 @@
 }
 
 .booking-popup .altanki_wrap .altanka span {
-  cursor: pointer;
   display: block;
   font-size: 10px;
   color: #00263a;
@@ -823,6 +824,7 @@
 }
 
 .booking-popup .altanki_wrap .altanka.booked {
+  cursor: default;
   border: 1px solid #00263a;
   background-color: #00263a;
   color: #fff;
@@ -834,7 +836,7 @@
   transition: color 180ms;
 }
 
-.booking-popup .altanki_wrap .altanka:hover:not(.reserved):not(.active) {
+.booking-popup .altanki_wrap .altanka:hover:not(.reserved):not(.active):not(.booked) {
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
   background-color: #a42b45;
   color: #fff;
@@ -843,7 +845,7 @@
   transition: box-shadow 180ms, color 180ms, border 180ms, transform 180ms, background-color 180ms;
 }
 
-.booking-popup .altanki_wrap .altanka:hover:not(.reserved):not(.active) span {
+.booking-popup .altanki_wrap .altanka:hover:not(.reserved):not(.active):not(.booked) span {
   color: #fff;
   transition: color 180ms;
 }
@@ -948,16 +950,19 @@
 @media all and (max-width: 770px) {
   .booking-popup .reserv_data {
     padding-left: 0;
+    line-height: 16px;
   }
 }
 
 .booking-popup .preson_count {
   display: flex;
   align-items: baseline;
+  margin-top: 20px;
 }
 
 @media all and (max-width: 770px) {
   .booking-popup .preson_count {
+    margin-top: 0;
     flex-wrap: wrap;
     margin-bottom: 20px;
   }
@@ -979,7 +984,8 @@
 @media all and (max-width: 770px) {
   .booking-popup .preson_count > p {
     padding-left: 0;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    margin-top: 10px;
     font-size: 11px;
   }
 }
@@ -1107,6 +1113,14 @@
 
 .booking-popup .book_form_wrap .left_part .input_wrap label input:focus {
   outline: -webkit-focus-ring-color auto 0;
+}
+
+.booking-popup .book_form_wrap .left_part .input_wrap label input:invalid {
+  color: #a42b45;
+}
+
+.booking-popup .book_form_wrap .left_part .input_wrap label input:invalid + .placeholder {
+  color: #a42b45;
 }
 
 .booking-popup .book_form_wrap .left_part .input_wrap label .placeholder {
@@ -1277,6 +1291,12 @@
   align-items: center;
 }
 
+@media all and (max-width: 750px) {
+  .booking-popup.altanki .accept {
+    align-items: flex-start;
+  }
+}
+
 .booking-popup.altanki .accept input {
   display: none;
 }
@@ -1302,6 +1322,8 @@
 @media all and (max-width: 750px) {
   .booking-popup.altanki .accept p {
     font-size: 11px;
+    line-height: 15px;
+    padding-top: 3px;
   }
 }
 
@@ -1330,13 +1352,13 @@
   display: none;
 }
 
-@media all and (max-width: 450px) {
+@media all and (max-width: 750px) {
   .pup_title.mob_header {
     display: block;
   }
 }
 
-@media all and (max-width: 450px) {
+@media all and (max-width: 750px) {
   .pup_title:not(.mob_header) {
     display: none;
   }
@@ -1359,7 +1381,7 @@
   margin-right: auto;
 }
 
-@media all and (max-width: 450px) {
+@media all and (max-width: 750px) {
   .popup-window {
     max-height: 85vh;
   }

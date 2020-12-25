@@ -10,7 +10,7 @@
   .popup-content {
     padding: 65px 45px 55px;
 
-    @media all and (max-width: 450px) {
+    @media all and (max-width: 750px) {
       padding: 50px 20px 40px;
     }
   }
@@ -21,7 +21,7 @@
     letter-spacing: 0;
     display: block !important;
 
-    @media all and (max-width: 450px) {
+    @media all and (max-width: 750px) {
       font-size: 11px;
       line-height: 23px;
     }
@@ -164,6 +164,7 @@
   .popup-content {
     width: 885px;
     padding: 50px 60px 45px;
+    min-height: 982px;
 
     @media all and (max-width: 1020px) {
       width: 90vw;
@@ -171,6 +172,7 @@
 
     @media all and (max-width: 760px) {
       padding: 20px 20px 30px;
+      min-height: unset;
     }
   }
 
@@ -735,7 +737,6 @@
       }
 
       span {
-        cursor: pointer;
         display: block;
         font-size: 10px;
         color: #00263a;
@@ -770,6 +771,7 @@
       }
 
       &.booked {
+        cursor: default;
         border: 1px solid #00263a;
         background-color: #00263a;
         color: #fff;
@@ -782,7 +784,7 @@
         }
       }
 
-      &:hover:not(.reserved):not(.active) {
+      &:hover:not(.reserved):not(.active):not(.booked) {
         box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
         background-color: #a42b45;
         color: #fff;
@@ -889,14 +891,17 @@
 
     @media all and (max-width: 770px) {
       padding-left: 0;
+      line-height: 16px;
     }
   }
 
   .preson_count {
     display: flex;
     align-items: baseline;
+    margin-top: 20px;
 
     @media all and (max-width: 770px) {
+      margin-top: 0;
       flex-wrap: wrap;
       margin-bottom: 20px;
     }
@@ -915,7 +920,8 @@
 
       @media all and (max-width: 770px) {
         padding-left: 0;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
+        margin-top: 10px;
         font-size: 11px;
       }
     }
@@ -1027,6 +1033,14 @@
 
             &:focus {
               outline: -webkit-focus-ring-color auto 0;
+            }
+
+            &:invalid {
+              color: #a42b45;
+
+              & + .placeholder {
+                color: #a42b45;
+              }
             }
           }
 
@@ -1182,6 +1196,10 @@
       display: flex;
       align-items: center;
 
+      @media all and (max-width: 750px) {
+        align-items: flex-start;
+      }
+
       input {
         display: none;
       }
@@ -1205,6 +1223,8 @@
 
         @media all and (max-width: 750px) {
           font-size: 11px;
+          line-height: 15px;
+          padding-top: 3px;
         }
       }
 
@@ -1231,13 +1251,13 @@
   &.mob_header {
     display: none;
 
-    @media all and (max-width: 450px) {
+    @media all and (max-width: 750px) {
       display: block;
     }
   }
 
   &:not(.mob_header) {
-    @media all and (max-width: 450px) {
+    @media all and (max-width: 750px) {
       display: none;
     }
   }
@@ -1261,7 +1281,7 @@
 }
 
 .popup-window {
-  @media all and (max-width: 450px) {
+  @media all and (max-width: 750px) {
     max-height: 85vh;
   }
 }
