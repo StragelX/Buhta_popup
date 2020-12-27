@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/modal_styles.css">
 
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.js"></script>
 </head>
 <body>
     <div class="myPopup confirmation-popup" style="display: flex;">
@@ -755,7 +756,7 @@
                             <div class="left_part">
                                 <div class="input_wrap">
                                     <label for="name">
-                                        <input type="text" id="name" required tabindex="1">
+                                        <input type="text" id="name" tabindex="1" class="placer">
 
                                         <span class="placeholder">Ім'я *</span>
                                     </label>
@@ -763,7 +764,7 @@
 
                                 <div class="input_wrap">
                                     <label for="surname">
-                                        <input type="text" id="surname" required tabindex="2">
+                                        <input type="text" id="surname" tabindex="2" class="placer">
 
                                         <span class="placeholder">Прізвище *</span>
                                     </label>
@@ -771,7 +772,7 @@
 
                                 <div class="input_wrap">
                                     <label for="tel">
-                                        <input type="tel" id="tel" required tabindex="3">
+                                        <input type="tel" id="tel" tabindex="3" class="placer phone">
 
                                         <span class="placeholder">Телефон *</span>
                                     </label>
@@ -779,7 +780,7 @@
 
                                 <div class="input_wrap">
                                     <label for="email">
-                                        <input type="email" id="email" required tabindex="4">
+                                        <input type="email" id="email" tabindex="4" class="placer">
 
                                         <span class="placeholder">Електронна скринька *</span>
                                     </label>
@@ -834,6 +835,12 @@
 
 <script>
 $( document ).ready(function() {
+    $('.placer').blur(function(){
+        ( $(this) ).val() !="" ? $(this).addClass("filled") : $(this).removeClass("filled");
+    })
+
+    $(".phone").mask("+38(099) 999 99 99");
+
     $('.pup_close_position').click(function(){
         $(this).closest(".myPopup").hide();
     })

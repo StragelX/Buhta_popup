@@ -503,7 +503,7 @@
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0);
   opacity: 1;
   transform: scale(1);
-  transition: opacity 180ms, color 180ms, background-color 180ms, box-shadow 180ms, transform 180ms;
+  transition: opacity 180ms, color 180ms, background-color 180ms, box-shadow 180ms, transform 180ms;
 }
 
 @media all and (max-width: 760px) {
@@ -530,7 +530,7 @@
   background-color: #a42b45;
   opacity: 1;
   color: #fff;
-  transition: opacity 180ms, color 180ms, background-color 180ms, box-shadow 180ms, transform 180ms;
+  transition: opacity 180ms, color 180ms, background-color 180ms, box-shadow 180ms, transform 180ms;
 }
 
 .booking-popup .calendar .day:hover:not(.disabled) {
@@ -539,7 +539,7 @@
   color: #fff;
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
   transform: scale(1.18);
-  transition: opacity 180ms, color 180ms, background-color 180ms, box-shadow 180ms, transform 180ms;
+  transition: opacity 180ms, color 180ms, background-color 180ms, box-shadow 180ms, transform 180ms;
 }
 
 .booking-popup .bnths_wrap {
@@ -779,7 +779,7 @@
   margin-bottom: 15px;
   margin-left: 15px;
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0);
-  transition: box-shadow 180ms, color 180ms, border 180ms, transform 180ms, background-color 180ms;
+  transition: box-shadow 180ms, color 180ms, border 180ms, transform 180ms, background-color 180ms;
 }
 
 @media all and (max-width: 750px) {
@@ -815,7 +815,7 @@
   border: 1px solid #a42b45;
   background-color: #a42b45;
   color: #fff;
-  transition: box-shadow 180ms, color 180ms, border 180ms, transform 180ms, background-color 180ms;
+  transition: box-shadow 180ms, color 180ms, border 180ms, transform 180ms, background-color 180ms;
 }
 
 .booking-popup .altanki_wrap .altanka.active span {
@@ -828,7 +828,7 @@
   border: 1px solid #00263a;
   background-color: #00263a;
   color: #fff;
-  transition: box-shadow 180ms, color 180ms, border 180ms, transform 180ms, background-color 180ms;
+  transition: box-shadow 180ms, color 180ms, border 180ms, transform 180ms, background-color 180ms;
 }
 
 .booking-popup .altanki_wrap .altanka.booked span {
@@ -842,7 +842,7 @@
   color: #fff;
   transform: scale(1.15);
   border: 1px solid #a42b45;
-  transition: box-shadow 180ms, color 180ms, border 180ms, transform 180ms, background-color 180ms;
+  transition: box-shadow 180ms, color 180ms, border 180ms, transform 180ms, background-color 180ms;
 }
 
 .booking-popup .altanki_wrap .altanka:hover:not(.reserved):not(.active):not(.booked) span {
@@ -1061,15 +1061,7 @@
 
 .booking-popup .book_form_wrap .left_part .input_wrap {
   width: 100%;
-  height: 50px;
-  border: 2px solid #00263a;
   position: relative;
-}
-
-@media all and (max-width: 750px) {
-  .booking-popup .book_form_wrap .left_part .input_wrap {
-    height: 45px;
-  }
 }
 
 .booking-popup .book_form_wrap .left_part .input_wrap + .input_wrap {
@@ -1083,31 +1075,36 @@
 }
 
 .booking-popup .book_form_wrap .left_part .input_wrap label {
-  position: absolute;
   width: 100%;
-  top: 0;
-  left: 0;
-  bottom: 0;
   margin-bottom: 0;
+  height: 50px;
+  position: relative;
+}
+
+@media all and (max-width: 750px) {
+  .booking-popup .book_form_wrap .left_part .input_wrap label {
+    height: 45px;
+  }
 }
 
 .booking-popup .book_form_wrap .left_part .input_wrap label input {
-  position: absolute;
   width: calc(100% - 30px);
-  top: 0;
-  left: 30px;
-  bottom: 0;
-  line-height: 46px;
+  margin-left: 30px;
+  line-height: 50px;
+  height: 50px;
   border: none;
   color: #00263a;
   font-family: Montserrat;
   font-size: 14px;
   font-weight: 600;
+  border: 2px solid #00263a;
+  padding-left: 30px;
 }
 
 @media all and (max-width: 750px) {
   .booking-popup .book_form_wrap .left_part .input_wrap label input {
-    line-height: 41px;
+    line-height: 45px;
+    height: 45px;
   }
 }
 
@@ -1117,6 +1114,7 @@
 
 .booking-popup .book_form_wrap .left_part .input_wrap label input:invalid {
   color: #a42b45;
+  border: 2px solid #a42b45;
 }
 
 .booking-popup .book_form_wrap .left_part .input_wrap label input:invalid + .placeholder {
@@ -1134,7 +1132,7 @@
   letter-spacing: 0.14px;
   line-height: 20px;
   top: 13px;
-  left: 24px;
+  left: 54px;
   background-color: #fff;
   padding-left: 8px;
   padding-right: 8px;
@@ -1143,7 +1141,7 @@
 }
 
 .booking-popup .book_form_wrap .left_part .input_wrap label input:focus + .placeholder,
-.booking-popup .book_form_wrap .left_part .input_wrap label input:valid + .placeholder {
+.booking-popup .book_form_wrap .left_part .input_wrap label .filled + .placeholder {
   transform: translate(0, -25px);
   transition: transform 240ms;
 }
