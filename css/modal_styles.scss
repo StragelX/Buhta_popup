@@ -1136,13 +1136,13 @@
   }
 
   &.altanki {
-    .popup-content {
-      padding: 60px 60px 45px;
+    // .popup-content {
+    //   padding: 60px 60px 45px;
 
-      @media all and (max-width: 750px) {
-        padding: 20px 20px 30px;
-      }
-    }
+    //   @media all and (max-width: 750px) {
+    //     padding: 20px 20px 30px;
+    //   }
+    // }
 
     .inner {
       padding-left: 54px;

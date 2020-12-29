@@ -1223,16 +1223,6 @@
   }
 }
 
-.booking-popup.altanki .popup-content {
-  padding: 60px 60px 45px;
-}
-
-@media all and (max-width: 750px) {
-  .booking-popup.altanki .popup-content {
-    padding: 20px 20px 30px;
-  }
-}
-
 .booking-popup.altanki .inner {
   padding-left: 54px;
 }
