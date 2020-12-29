@@ -218,19 +218,13 @@
 }
 
 .booking-popup .progress_line_wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 @media all and (max-width: 760px) {
   .booking-popup .progress_line_wrap {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
   }
 }
 
@@ -246,20 +240,13 @@
 }
 
 .booking-popup .progress_line_wrap .step .img_wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   width: 49px;
   height: 49px;
   border: 2px solid #00263a;
   opacity: 0.3;
-  -webkit-transition: opacity 360ms;
   transition: opacity 360ms;
 }
 
@@ -287,12 +274,9 @@
   font-weight: 600;
   text-align: center;
   left: 50%;
-  -webkit-transform-origin: top left;
-          transform-origin: top left;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform-origin: top left;
+  transform: translateX(-50%);
   opacity: 0.3;
-  -webkit-transition: opacity 180ms;
   transition: opacity 180ms;
 }
 
@@ -310,7 +294,6 @@
 .booking-popup .progress_line_wrap .step.active .img_wrap,
 .booking-popup .progress_line_wrap .step.active span {
   opacity: 1;
-  -webkit-transition: opacity 360ms;
   transition: opacity 360ms;
 }
 
@@ -321,13 +304,10 @@
 }
 
 .booking-popup .progress_line_wrap .line {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  flex: 1 1 auto;
   height: 2px;
   background-color: #00263a;
   opacity: 0.3;
-  -webkit-transition: opacity 360ms;
   transition: opacity 360ms;
 }
 
@@ -339,7 +319,6 @@
 
 .booking-popup .progress_line_wrap .line.active {
   opacity: 1;
-  -webkit-transition: opacity 360ms;
   transition: opacity 360ms;
 }
 
@@ -392,15 +371,9 @@
 }
 
 .booking-popup .month_switch {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .booking-popup .month_switch .month {
@@ -445,8 +418,7 @@
 }
 
 .booking-popup .month_switch button.prew_mnth:before {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
   background: url("../img/calendar_arrow.svg") no-repeat center/10px auto;
 }
 
@@ -469,15 +441,9 @@
 .booking-popup .days_line_wrap {
   padding-top: 11px;
   padding-bottom: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
 }
 
 @media all and (max-width: 760px) {
@@ -508,15 +474,9 @@
 }
 
 .booking-popup .calendar .line {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .booking-popup .calendar .line + .line {
@@ -540,15 +500,10 @@
   padding: 15px;
   cursor: pointer;
   background-color: transparent;
-  -webkit-box-shadow: 3px 3px 6px rgba(0, 0, 0, 0);
-          box-shadow: 3px 3px 6px rgba(0, 0, 0, 0);
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0);
   opacity: 1;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: opacity 180ms, color 180ms, background-color 180ms, -webkit-box-shadow 180ms, -webkit-transform 180ms;
-  transition: opacity 180ms, color 180ms, background-color 180ms, -webkit-box-shadow 180ms, -webkit-transform 180ms;
-  transition: opacity 180ms, color 180ms, background-color 180ms, box-shadow 180ms, transform 180ms;
-  transition: opacity 180ms, color 180ms, background-color 180ms, box-shadow 180ms, transform 180ms, -webkit-box-shadow 180ms, -webkit-transform 180ms;
+  transform: scale(1);
+  transition: opacity 180ms, color 180ms, background-color 180ms, box-shadow 180ms, transform 180ms;
 }
 
 @media all and (max-width: 760px) {
@@ -575,33 +530,21 @@
   background-color: #a42b45;
   opacity: 1;
   color: #fff;
-  -webkit-transition: opacity 180ms, color 180ms, background-color 180ms, -webkit-box-shadow 180ms, -webkit-transform 180ms;
-  transition: opacity 180ms, color 180ms, background-color 180ms, -webkit-box-shadow 180ms, -webkit-transform 180ms;
-  transition: opacity 180ms, color 180ms, background-color 180ms, box-shadow 180ms, transform 180ms;
-  transition: opacity 180ms, color 180ms, background-color 180ms, box-shadow 180ms, transform 180ms, -webkit-box-shadow 180ms, -webkit-transform 180ms;
+  transition: opacity 180ms, color 180ms, background-color 180ms, box-shadow 180ms, transform 180ms;
 }
 
 .booking-popup .calendar .day:hover:not(.disabled) {
   background-color: #a42b45;
   opacity: 1;
   color: #fff;
-  -webkit-box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
-          box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
-  -webkit-transform: scale(1.18);
-          transform: scale(1.18);
-  -webkit-transition: opacity 180ms, color 180ms, background-color 180ms, -webkit-box-shadow 180ms, -webkit-transform 180ms;
-  transition: opacity 180ms, color 180ms, background-color 180ms, -webkit-box-shadow 180ms, -webkit-transform 180ms;
-  transition: opacity 180ms, color 180ms, background-color 180ms, box-shadow 180ms, transform 180ms;
-  transition: opacity 180ms, color 180ms, background-color 180ms, box-shadow 180ms, transform 180ms, -webkit-box-shadow 180ms, -webkit-transform 180ms;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
+  transform: scale(1.18);
+  transition: opacity 180ms, color 180ms, background-color 180ms, box-shadow 180ms, transform 180ms;
 }
 
 .booking-popup .bnths_wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  justify-content: flex-end;
   height: 132px;
   position: absolute;
   width: calc(100% - 120px);
@@ -610,9 +553,22 @@
 
 @media all and (max-width: 450px) {
   .booking-popup .bnths_wrap {
+    height: auto;
     position: relative;
     bottom: auto;
     width: 100%;
+  }
+}
+
+.booking-popup .bnths_wrap .blue_wave_link,
+.booking-popup .bnths_wrap .grey_wave_link {
+  margin-top: 77px;
+}
+
+@media all and (max-width: 750px) {
+  .booking-popup .bnths_wrap .blue_wave_link,
+  .booking-popup .bnths_wrap .grey_wave_link {
+    margin-top: 15px;
   }
 }
 
@@ -641,23 +597,16 @@
 }
 
 .booking-popup .altanka_selector {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   margin-top: 42px;
   margin-bottom: 17px;
 }
 
 @media all and (max-width: 770px) {
   .booking-popup .altanka_selector {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     margin-top: 11px;
     margin-bottom: 10px;
   }
@@ -665,21 +614,15 @@
 
 @media all and (max-width: 770px) {
   .booking-popup .altanka_selector .select_and_map {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 100%;
-            flex: 1 1 100%;
+    flex: 1 1 100%;
     margin-bottom: 15px;
   }
 }
 
 .booking-popup .altanka_selector .select_and_map .booking_type {
   cursor: default;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   color: #00263a;
   font-family: Montserrat;
   font-size: 16px;
@@ -691,8 +634,7 @@
 
 @media all and (max-width: 750px) {
   .booking-popup .altanka_selector .select_and_map .booking_type {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     font-size: 11px;
     margin-bottom: 6px;
   }
@@ -742,17 +684,10 @@
   border: 2px solid #00263a;
   position: relative;
   cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  align-items: center;
+  justify-content: flex-start;
   opacity: 1;
-  -webkit-transition: opacity 180ms;
   transition: opacity 180ms;
 }
 
@@ -764,13 +699,11 @@
 
 .booking-popup .altanka_selector .drop_down_wrap:hover {
   opacity: 0.4;
-  -webkit-transition: opacity 180ms;
   transition: opacity 180ms;
 }
 
 .booking-popup .altanka_selector .drop_down_wrap.active {
   opacity: 1;
-  -webkit-transition: opacity 180ms;
   transition: opacity 180ms;
 }
 
@@ -849,14 +782,9 @@
 }
 
 .booking-popup .altanki_wrap {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  flex-wrap: wrap;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   margin-left: -15px;
 }
 
@@ -875,12 +803,8 @@
   line-height: normal;
   margin-bottom: 15px;
   margin-left: 15px;
-  -webkit-box-shadow: 3px 3px 6px rgba(0, 0, 0, 0);
-          box-shadow: 3px 3px 6px rgba(0, 0, 0, 0);
-  -webkit-transition: color 180ms, border 180ms, background-color 180ms, -webkit-box-shadow 180ms, -webkit-transform 180ms;
-  transition: color 180ms, border 180ms, background-color 180ms, -webkit-box-shadow 180ms, -webkit-transform 180ms;
-  transition: box-shadow 180ms, color 180ms, border 180ms, transform 180ms, background-color 180ms;
-  transition: box-shadow 180ms, color 180ms, border 180ms, transform 180ms, background-color 180ms, -webkit-box-shadow 180ms, -webkit-transform 180ms;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0);
+  transition: box-shadow 180ms, color 180ms, border 180ms, transform 180ms, background-color 180ms;
 }
 
 @media all and (max-width: 750px) {
@@ -896,7 +820,6 @@
   font-size: 10px;
   color: #00263a;
   font-weight: 400;
-  -webkit-transition: color 180ms;
   transition: color 180ms;
 }
 
@@ -917,15 +840,11 @@
   border: 1px solid #a42b45;
   background-color: #a42b45;
   color: #fff;
-  -webkit-transition: color 180ms, border 180ms, background-color 180ms, -webkit-box-shadow 180ms, -webkit-transform 180ms;
-  transition: color 180ms, border 180ms, background-color 180ms, -webkit-box-shadow 180ms, -webkit-transform 180ms;
-  transition: box-shadow 180ms, color 180ms, border 180ms, transform 180ms, background-color 180ms;
-  transition: box-shadow 180ms, color 180ms, border 180ms, transform 180ms, background-color 180ms, -webkit-box-shadow 180ms, -webkit-transform 180ms;
+  transition: box-shadow 180ms, color 180ms, border 180ms, transform 180ms, background-color 180ms;
 }
 
 .booking-popup .altanki_wrap .altanka.active span {
   color: #fff;
-  -webkit-transition: color 180ms;
   transition: color 180ms;
 }
 
@@ -934,59 +853,42 @@
   border: 1px solid #00263a;
   background-color: #00263a;
   color: #fff;
-  -webkit-transition: color 180ms, border 180ms, background-color 180ms, -webkit-box-shadow 180ms, -webkit-transform 180ms;
-  transition: color 180ms, border 180ms, background-color 180ms, -webkit-box-shadow 180ms, -webkit-transform 180ms;
-  transition: box-shadow 180ms, color 180ms, border 180ms, transform 180ms, background-color 180ms;
-  transition: box-shadow 180ms, color 180ms, border 180ms, transform 180ms, background-color 180ms, -webkit-box-shadow 180ms, -webkit-transform 180ms;
+  transition: box-shadow 180ms, color 180ms, border 180ms, transform 180ms, background-color 180ms;
 }
 
 .booking-popup .altanki_wrap .altanka.booked span {
   color: #fff;
-  -webkit-transition: color 180ms;
   transition: color 180ms;
 }
 
 .booking-popup .altanki_wrap .altanka:hover:not(.reserved):not(.active):not(.booked) {
-  -webkit-box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
-          box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
   background-color: #a42b45;
   color: #fff;
-  -webkit-transform: scale(1.15);
-          transform: scale(1.15);
+  transform: scale(1.15);
   border: 1px solid #a42b45;
-  -webkit-transition: color 180ms, border 180ms, background-color 180ms, -webkit-box-shadow 180ms, -webkit-transform 180ms;
-  transition: color 180ms, border 180ms, background-color 180ms, -webkit-box-shadow 180ms, -webkit-transform 180ms;
-  transition: box-shadow 180ms, color 180ms, border 180ms, transform 180ms, background-color 180ms;
-  transition: box-shadow 180ms, color 180ms, border 180ms, transform 180ms, background-color 180ms, -webkit-box-shadow 180ms, -webkit-transform 180ms;
+  transition: box-shadow 180ms, color 180ms, border 180ms, transform 180ms, background-color 180ms;
 }
 
 .booking-popup .altanki_wrap .altanka:hover:not(.reserved):not(.active):not(.booked) span {
   color: #fff;
-  -webkit-transition: color 180ms;
   transition: color 180ms;
 }
 
 .booking-popup .altanki_wrap:after {
   content: "";
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 
 .booking-popup .status_wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   margin-top: 8px;
 }
 
 @media all and (max-width: 770px) {
   .booking-popup .status_wrap {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
 }
 
@@ -1004,21 +906,15 @@
 
 @media all and (max-width: 770px) {
   .booking-popup .status_wrap p {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 100%;
-            flex: 1 1 100%;
+    flex: 1 1 100%;
     margin-bottom: 3px;
     font-size: 11px;
   }
 }
 
 .booking-popup .status_wrap .status {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   color: #00263a;
   font-family: Montserrat;
   font-size: 14px;
@@ -1084,20 +980,15 @@
 }
 
 .booking-popup .preson_count {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  align-items: baseline;
   margin-top: 20px;
 }
 
 @media all and (max-width: 770px) {
   .booking-popup .preson_count {
     margin-top: 0;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     margin-bottom: 20px;
   }
 }
@@ -1125,36 +1016,21 @@
 }
 
 .booking-popup .preson_count > div {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  flex: 1 1 auto;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .booking-popup .preson_count .type {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 50%;
-          flex: 1 1 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  flex: 1 1 50%;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 @media all and (max-width: 750px) {
   .booking-popup .preson_count .type {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 100%;
-            flex: 1 1 100%;
+    flex: 1 1 100%;
     margin-bottom: 5px;
   }
 }
@@ -1167,12 +1043,8 @@
   font-weight: 600;
   letter-spacing: 0.14px;
   line-height: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   cursor: default;
 }
 
@@ -1191,35 +1063,24 @@
 }
 
 .booking-popup .book_form_wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: start;
+  justify-content: space-between;
 }
 
 @media all and (max-width: 750px) {
   .booking-popup .book_form_wrap {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
 }
 
 .booking-popup .book_form_wrap .left_part {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 300px;
-          flex: 0 0 300px;
+  flex: 0 0 300px;
 }
 
 @media all and (max-width: 750px) {
   .booking-popup .book_form_wrap .left_part {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 100%;
-            flex: 1 1 100%;
+    flex: 1 1 100%;
   }
 }
 
@@ -1299,48 +1160,32 @@
   background-color: #fff;
   padding-left: 8px;
   padding-right: 8px;
-  -webkit-transform: translate(0);
-          transform: translate(0);
-  -webkit-transition: -webkit-transform 240ms;
-  transition: -webkit-transform 240ms;
+  transform: translate(0);
   transition: transform 240ms;
-  transition: transform 240ms, -webkit-transform 240ms;
 }
 
 .booking-popup .book_form_wrap .left_part .input_wrap label input:focus + .placeholder,
 .booking-popup .book_form_wrap .left_part .input_wrap label .filled + .placeholder {
-  -webkit-transform: translate(0, -25px);
-          transform: translate(0, -25px);
-  -webkit-transition: -webkit-transform 240ms;
-  transition: -webkit-transform 240ms;
+  transform: translate(0, -25px);
   transition: transform 240ms;
-  transition: transform 240ms, -webkit-transform 240ms;
 }
 
 .booking-popup .book_form_wrap .right_part {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  flex: 1 1 auto;
   padding-left: 40px;
 }
 
 @media all and (max-width: 750px) {
   .booking-popup .book_form_wrap .right_part {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 100%;
-            flex: 1 1 100%;
+    flex: 1 1 100%;
     padding-left: 0;
     margin-top: 20px;
   }
 }
 
 .booking-popup .book_form_wrap .right_part p {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   color: #00263a;
   font-family: Montserrat;
   font-size: 14px;
@@ -1399,12 +1244,21 @@
 }
 
 .booking-popup.altanki .bnths_wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
+  position: absolute;
+  width: calc(100% - 120px);
+  bottom: 60px;
+  height: auto;
+}
+
+@media all and (max-width: 450px) {
+  .booking-popup.altanki .bnths_wrap {
+    height: auto;
+    position: relative;
+    bottom: auto;
+    width: 100%;
+  }
 }
 
 .booking-popup.altanki .subtitle {
@@ -1468,19 +1322,13 @@
 }
 
 .booking-popup.altanki .accept {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 @media all and (max-width: 750px) {
   .booking-popup.altanki .accept {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    align-items: flex-start;
   }
 }
 
@@ -1493,9 +1341,7 @@
   height: 20px;
   border: 2px solid #00263a;
   cursor: pointer;
-  -webkit-box-flex: 0;
-      -ms-flex: none;
-          flex: none;
+  flex: none;
 }
 
 .booking-popup.altanki .accept p {
@@ -1518,18 +1364,6 @@
 
 .booking-popup.altanki .accept input:checked + span {
   background: url("../img/checked-symbol.svg") no-repeat center/12px;
-}
-
-.booking-popup.altanki .blue_wave_link,
-.booking-popup.altanki .grey_wave_link {
-  margin-top: 77px;
-}
-
-@media all and (max-width: 750px) {
-  .booking-popup.altanki .blue_wave_link,
-  .booking-popup.altanki .grey_wave_link {
-    margin-top: 15px;
-  }
 }
 
 .pup_title {
